@@ -1,4 +1,4 @@
-# PROJECT: Testing Math-Magicians website
+# PROJECT: BookStore-cms
 In this project, we set up the bookstore application that will help a company organize and manage their bookstore. We install prop-types for type checking, and install React and Redux.
 
  
