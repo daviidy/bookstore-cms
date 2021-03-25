@@ -5,6 +5,7 @@ const BooksForm = () => {
     <form>
       <input type="text" id="title" />
       <select name="category" id="category">
+         categories.map()
         <option value="">categories</option>
       </select>
       <button type="submit">submit</button>
