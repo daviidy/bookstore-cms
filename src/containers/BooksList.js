@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import Book from '../components/Book';
 
-const BooksList = () => (
+const BooksList = ({ books }) => (
   <table>
     <thead>
       <tr>
@@ -13,7 +13,7 @@ const BooksList = () => (
     <tbody>
       {
           books && books.length
-            ? books.map((val, key) => <Book key={key} book={val} />)
+            ? books.map(val => <Book key={val.id} book={val} />)
             : 'No books!'
       }
 
