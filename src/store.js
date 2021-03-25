@@ -1,4 +1,20 @@
 import { createStore } from 'redux';
 import combineReducers from './reducers/index';
 
-export default createStore(combineReducers);
+const state = {
+  books: [
+    {
+      id: Math.random(),
+      title: 'Limitless',
+      category: 'Learning',
+    },
+
+    {
+      id: Math.random(),
+      title: 'Scala fundamentals',
+      category: 'Learning',
+    },
+  ],
+};
+
+export default createStore(combineReducers, state);

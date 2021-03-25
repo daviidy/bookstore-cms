@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import Book from '../components/Book';
 
 const BooksList = ({ books }) => (
@@ -27,3 +28,11 @@ const mapStateToProps = state => {
 };
 
 export default connect(mapStateToProps, null)(BooksList);
+
+BooksList.propTypes = {
+  books: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+  })).isRequired,
+};
