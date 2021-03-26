@@ -19,6 +19,12 @@ const BooksForm = () => {
     });
   };
 
+  const clearState = () => {
+    setBook({
+      ...initialState,
+    });
+  };
+
   const handleSubmit = e => {
     e.preventDefault();
     setBook({
@@ -27,9 +33,7 @@ const BooksForm = () => {
 
     });
     createBook(book);
-    setBook({
-      ...initialState,
-    });
+    clearState();
   };
 
   return (
