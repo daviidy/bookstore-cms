@@ -4,11 +4,12 @@ import { createBook } from '../actions/index';
 
 const BooksForm = () => {
   const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
-  const [book, setBook] = useState({
+  const initialState = {
     title: '',
     category: '',
     id: null,
-  });
+  };
+  const [book, setBook] = useState(initialState);
 
   const handleChange = e => {
     e.preventDefault();
@@ -26,11 +27,14 @@ const BooksForm = () => {
 
     });
     createBook(book);
+    setBook({
+      ...initialState,
+    });
   };
 
   return (
     <form>
-      <input type="text" id="title" name="title" onChange={handleChange} />
+      <input type="text" id="title" name="title" value={book.title} onChange={handleChange} />
       <select name="category" id="category" onChange={handleChange}>
 
         {categories.map(val => <option key={val} value={val}>{val}</option>)}
