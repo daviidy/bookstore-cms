@@ -1,10 +1,13 @@
 import { useState } from 'react';
+import { connect } from 'react-redux';
+import { createBook } from '../actions/index';
 
 const BooksForm = () => {
   const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   const [book, setBook] = useState({
     title: '',
     category: '',
+    id: null,
   });
 
   const handleChange = e => {
@@ -15,7 +18,16 @@ const BooksForm = () => {
     });
   };
 
-  const
+  const handleSubmit = e => {
+    e.preventDefault();
+    setBook({
+      ...book,
+      id: Math.floor(Math.random() * 100),
+
+    });
+    createBook(book);
+  };
+
   return (
     <form>
       <input type="text" id="title" name="title" onChange={handleChange} />
@@ -29,4 +41,10 @@ const BooksForm = () => {
   );
 };
 
-export default BooksForm;
+const mapDispatchToProps = dispatch => ({
+  createBook: book => {
+    dispatch(createBook(book));
+  },
+});
+
+export default connect(null, mapDispatchToProps)(BooksForm);
