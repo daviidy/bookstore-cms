@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { createBook } from '../actions/index';
 
-const BooksForm = () => {
+const BooksForm = props => {
   const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   const initialState = {
     title: '',
@@ -16,6 +17,7 @@ const BooksForm = () => {
     setBook({
       ...book,
       [e.target.name]: e.target.value,
+      id: Math.floor(Math.random() * 100),
     });
   };
 
@@ -27,12 +29,7 @@ const BooksForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    setBook({
-      ...book,
-      id: Math.floor(Math.random() * 100),
-
-    });
-    createBook(book);
+    props.createBook(book);
     clearState();
   };
 
@@ -56,3 +53,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(null, mapDispatchToProps)(BooksForm);
+
+BooksForm.propTypes = {
+  createBook: PropTypes.func.isRequired,
+};

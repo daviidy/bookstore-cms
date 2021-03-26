@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Book from '../components/Book';
 import { removeBook } from '../actions/index';
 
-const BooksList = ({ books }) => {
+const BooksList = ({ books, removeBook }) => {
   const handleRemoveBook = book => {
     removeBook(book);
   };
@@ -24,7 +24,11 @@ const BooksList = ({ books }) => {
             ? books.map(val => (
               <Book handleRemoveBook={handleRemoveBook} key={val.id} book={val} />
             ))
-            : 'No books!'
+            : (
+              <tr>
+                <td>No books!</td>
+              </tr>
+            )
       }
 
       </tbody>
@@ -51,4 +55,5 @@ BooksList.propTypes = {
     title: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
   })).isRequired,
+  removeBook: PropTypes.func.isRequired,
 };

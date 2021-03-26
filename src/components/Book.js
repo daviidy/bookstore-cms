@@ -12,7 +12,7 @@ const Book = ({ book, handleRemoveBook }) => (
       { book.category }
     </td>
     <td>
-      <button onClick={handleRemoveBook(book)} type="submit">Remove</button>
+      <button onClick={() => handleRemoveBook(book)} type="submit">Remove</button>
     </td>
   </tr>
 );
