@@ -1,33 +1,53 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
+import { removeBook } from '../actions/index';
 
-const BooksList = ({ books }) => (
-  <table>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Title</th>
-        <th>Category</th>
-      </tr>
-    </thead>
-    <tbody>
-      {
+const BooksList = ({ books, removeBook }) => {
+  const handleRemoveBook = (book) => {
+    removeBook(book);
+  };
+
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Category</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
           books && books.length
-            ? books.map(val => <Book key={val.id} book={val} />)
-            : 'No books!'
+            ? books.map((val) => (
+              <Book handleRemoveBook={handleRemoveBook} key={val.id} book={val} />
+            ))
+            : (
+              <tr>
+                <td>No books!</td>
+              </tr>
+            )
       }
 
-    </tbody>
-  </table>
-);
+      </tbody>
+    </table>
+  );
+};
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   const { books } = state;
   return { books };
 };
 
-export default connect(mapStateToProps, null)(BooksList);
+const mapDispatchToProps = (dispatch) => ({
+  removeBook: (book) => {
+    dispatch(removeBook(book));
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
 
 BooksList.propTypes = {
   books: PropTypes.arrayOf(PropTypes.shape({
@@ -35,4 +55,5 @@ BooksList.propTypes = {
     title: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
   })).isRequired,
+  removeBook: PropTypes.func.isRequired,
 };
