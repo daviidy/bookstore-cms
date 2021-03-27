@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions/index';
 
-const BooksForm = props => {
+const BooksForm = (props) => {
   const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   const initialState = {
     title: '',
@@ -12,7 +12,7 @@ const BooksForm = props => {
   };
   const [book, setBook] = useState(initialState);
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     e.preventDefault();
     setBook({
       ...book,
@@ -27,7 +27,7 @@ const BooksForm = props => {
     });
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     props.createBook(book);
     clearState();
@@ -38,16 +38,16 @@ const BooksForm = props => {
       <input type="text" id="title" name="title" value={book.title} onChange={handleChange} />
       <select name="category" id="category" onChange={handleChange}>
 
-        {categories.map(val => <option key={val} value={val}>{val}</option>)}
+        {categories.map((val) => <option key={val} value={val}>{val}</option>)}
 
       </select>
-      <button type="submit" onClick={handleSubmit}>submit</button>
+      <button type="submit" onSubmit={handleSubmit}>submit</button>
     </form>
   );
 };
 
-const mapDispatchToProps = dispatch => ({
-  createBook: book => {
+const mapDispatchToProps = (dispatch) => ({
+  createBook: (book) => {
     dispatch(createBook(book));
   },
 });

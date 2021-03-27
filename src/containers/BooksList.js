@@ -4,7 +4,7 @@ import Book from '../components/Book';
 import { removeBook } from '../actions/index';
 
 const BooksList = ({ books, removeBook }) => {
-  const handleRemoveBook = book => {
+  const handleRemoveBook = (book) => {
     removeBook(book);
   };
 
@@ -21,7 +21,7 @@ const BooksList = ({ books, removeBook }) => {
       <tbody>
         {
           books && books.length
-            ? books.map(val => (
+            ? books.map((val) => (
               <Book handleRemoveBook={handleRemoveBook} key={val.id} book={val} />
             ))
             : (
@@ -36,13 +36,13 @@ const BooksList = ({ books, removeBook }) => {
   );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   const { books } = state;
   return { books };
 };
 
-const mapDispatchToProps = dispatch => ({
-  removeBook: book => {
+const mapDispatchToProps = (dispatch) => ({
+  removeBook: (book) => {
     dispatch(removeBook(book));
   },
 });
