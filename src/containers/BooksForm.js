@@ -34,14 +34,14 @@ const BooksForm = (props) => {
   };
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <input type="text" id="title" name="title" value={book.title} onChange={handleChange} />
       <select name="category" id="category" onChange={handleChange}>
 
         {categories.map((val) => <option key={val} value={val}>{val}</option>)}
 
       </select>
-      <button type="submit" onSubmit={handleSubmit}>submit</button>
+      <button type="submit">submit</button>
     </form>
   );
 };
