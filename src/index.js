@@ -20,6 +20,8 @@ const state = {
       category: 'Learning',
     },
   ],
+
+  filter: 'All',
 };
 
 const store = createStore(combineReducers, state);
