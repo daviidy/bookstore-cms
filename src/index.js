@@ -19,6 +19,12 @@ const state = {
       title: 'Scala fundamentals',
       category: 'Learning',
     },
+
+    {
+      id: Math.random(),
+      title: 'Harry potter',
+      category: 'Kids',
+    },
   ],
 
   filter: 'All',
