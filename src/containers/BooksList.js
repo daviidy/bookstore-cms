@@ -15,24 +15,21 @@ const BooksList = ({
     changeFilter(filter);
   };
 
+  const renderBooks = (array) => (array.map((val) => (
+    <Book handleRemoveBook={handleRemoveBook} key={val.id} book={val} />
+  )));
+
   const renderFilter = () => {
     if (filter === 'All') {
       return (
-        books.map((val) => (
-          <Book handleRemoveBook={handleRemoveBook} key={val.id} book={val} />
-        ))
+        renderBooks(books)
       );
     }
 
     return (
-      books.filter((book) => book.category === filter)
-        .map((val) => (
-          <Book handleRemoveBook={handleRemoveBook} key={val.id} book={val} />
-        ))
+      renderBooks(books.filter((book) => book.category === filter))
     );
   };
-
-  console.log(filter);
 
   return (
     <>
