@@ -1,27 +1,106 @@
-body {
-  margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --azure: #0290ff;
+  --black-two: #121212;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+/*
+    CSS Reset
+*/
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+input,
+button,
+ul,
+li,
+a,
+p {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  text-align: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  background: transparent;
+  list-style: none;
+}
+
+body {
+  font-family: Montserrat;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-navbar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.panel-bg {
+  width: 1400px;
+  height: 95px;
+  margin: 0 0 38px;
+  padding: 23px 99px 27px 100px;
+  background-color: var(--white);
+}
+
+.Bookstore-CMS {
+  width: 240px;
+  height: 37px;
+  margin: 6px 47px 2px 0;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--azure);
+}
+
+.dafault-font {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--black-two);
+  font-size: 13px;
+  height: 16px;
+}
+
+.BOOKS {
+  width: 59px;
+  margin: 18px 41px 11px 0;
+}
+
+.CATEGORIES {
+  width: 105px;
+  margin: 18px 664px 11px 41px;
+  opacity: 0.5;
+}
+
+.Oval {
+  width: 25px;
+  height: 2 5px;
+  margin-left: auto;
+  padding: 14px;
+  border: solid 1px #e8e8e8;
+  border-radius: 50%;
+}
+
+.Mask {
+  width: 17px;
+  height: 17px;
+  color: var(--azure);
+  font-size: 17px;
+  display: block;
+  margin: auto;
 }
