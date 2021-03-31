@@ -14,24 +14,24 @@ const Book = ({ book, handleRemoveBook }) => {
     <td>
       <button onClick={() => handleRemoveBook(book)} type="submit">Remove</button>
     </td>
-  </tr>
+  </tr>;
 
-    return (
-      <main className="book-panel">
-        <div>
-          <div className="category book-default-font">{book.category}</div>
-          <div className="title book-default-font">{book.title}</div>
-          <div className="author">Harry Porter</div>
-          <div className="comment-section">
-            <button type="button" className="default-comment">Comments</button>
-            <button className="default-comment" onClick={() => handleRemoveBook(book)} type="submit">Remove</button>
-            <button type="button" className="default-comment">Edit</button>
-          </div>
+  return (
+    <main className="book-panel">
+      <div>
+        <div className="category book-default-font">{book.category}</div>
+        <div className="title book-default-font">{book.title}</div>
+        <div className="author">Harry Porter</div>
+        <div className="comment-section">
+          <button type="button" className="default-comment">Comments</button>
+          <button className="default-comment" onClick={() => handleRemoveBook(book)} type="submit">Remove</button>
+          <button type="button" className="default-comment">Edit</button>
         </div>
-        <div />
-        <div />
-      </main>
-    );
+      </div>
+      <div />
+      <div />
+    </main>
+  );
 };
 export default Book;
 

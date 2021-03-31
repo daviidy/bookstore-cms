@@ -1,6 +1,9 @@
+
 :root {
   --azure: #0290ff;
   --black-two: #121212;
+  --cool-blue: #4386bf;
+  --white: #fff;
 }
 
 /*
@@ -103,4 +106,70 @@ nav {
   font-size: 17px;
   display: block;
   margin: auto;
+}
+
+.book-panel {
+  width: 1200px;
+  height: 170px;
+  margin: 37px 100px 0;
+  padding: 32px 147px 26px 27px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: var(--white);
+}
+
+.book-default-font {
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  color: var(--black-two);
+}
+
+.category {
+  width: 49px;
+  height: 18px;
+  margin: 0 39px 0 0;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 14px;
+  letter-spacing: normal;
+}
+
+.title {
+  width: 197px;
+  height: 29px;
+  margin: 3px 323px 0 0;
+  font-family: RobotoSlab;
+  font-size: 22px;
+  letter-spacing: -0.2px;
+}
+
+.author {
+  width: 107px;
+  height: 19px;
+  margin: 4px 0 0;
+  font-family: RobotoSlab;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: normal;
+  color: var(--cool-blue);
+}
+
+.default-comment {
+  height: 19px;
+  font-family: RobotoSlab;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--cool-blue);
+  margin: 5px;
+}
+
+.comment-section {
+  display: flex;
+  flex-wrap: wrap;
 }
