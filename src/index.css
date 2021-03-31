@@ -4,6 +4,8 @@
   --black-two: #121212;
   --cool-blue: #4386bf;
   --white: #fff;
+  --medium-blue: #307bbe;
+  --dodger-blue: #379cf6;
 }
 
 /*
@@ -116,6 +118,9 @@ nav {
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .book-default-font {
@@ -173,3 +178,75 @@ nav {
   display: flex;
   flex-wrap: wrap;
 }
+
+.rectangle {
+  width: 90px;
+  height: 89.9px;
+  padding: 9.9px 10px 12px 12px;
+}
+
+.Oval-2 {
+  width: 68px;
+  height: 68px;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 50%;
+  background-image: linear-gradient(to bottom, var(--medium-blue), var(--dodger-blue));
+  border-image-slice: 1;
+}
+
+.book-update {
+  display: flex;
+  align-items: center;
+
+}
+
+.update-progress {
+  width: 163px;
+  height: 35px;
+  font-family: RobotoSlab;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--azure);
+  /*  padding: 10px; */
+}
+
+.line-2 {
+  width: 0.5px;
+  height: 70px;
+  margin: 18px 59px 0 79px;
+  border: solid 1px #e8e8e8;
+}
+
+.default-current {
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  color: var(--black-two);
+  font-family: RobotoSlab;
+}
+
+.current-chapter {
+  width: 126px;
+  height: 18px;
+  margin: 1px 58px 0 0;
+  opacity: 0.5;
+  font-size: 13px;
+  letter-spacing: normal; 
+}
+
+.current-lesson {
+  width: 105px;
+  height: 21px;
+  margin: 7px 109px 4px 0;
+  font-size: 16px;
+  letter-spacing: -0.4px;  
+}
+
