@@ -35,8 +35,9 @@ const BooksForm = (props) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" id="title" name="title" value={book.title} onChange={handleChange} />
-      <select name="category" id="category" onChange={handleChange}>
+      <h2 className="add-new-book">ADD NEW BOOK</h2>
+      <input type="text" id="title" name="title" className="book-title" value={book.title} onChange={handleChange} />
+      <select name="category" id="category" className="book-category" onChange={handleChange}>
 
         {categories.map((val) => <option key={val} value={val}>{val}</option>)}
 

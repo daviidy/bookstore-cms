@@ -34,14 +34,14 @@ const BooksList = ({
   return (
     <>
       <table>
-        <thead>
+        {/* <thead>
           <tr>
             <th>ID</th>
             <th>Title</th>
             <th>Category</th>
             <th>Action</th>
           </tr>
-        </thead>
+        </thead> */}
         <tbody>
           {
               books && books.length
