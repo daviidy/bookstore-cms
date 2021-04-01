@@ -33,29 +33,17 @@ const BooksList = ({
 
   return (
     <>
-      <table>
-        {/* <thead>
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Category</th>
-            <th>Action</th>
-          </tr>
-        </thead> */}
-        <tbody>
-          {
+      <CategoryFilter handleFilterChange={handleFilterChange} />
+      <div className="container">
+        {
               books && books.length
                 ? renderFilter()
                 : (
-                  <tr>
-                    <td>No books!</td>
-                  </tr>
+                  <p>No books!</p>
                 )
 
           }
-        </tbody>
-      </table>
-      <CategoryFilter handleFilterChange={handleFilterChange} />
+      </div>
     </>
   );
 };

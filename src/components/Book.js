@@ -1,8 +1,11 @@
 import PropTypes from 'prop-types';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+import '../custom.css';
 
 const Book = ({ book, handleRemoveBook }) => (
-  <main className="book-panel">
-    <div>
+  <main className="book-panel row">
+    <div className="col-5">
       <div className="category book-default-font">{book.category}</div>
       <div className="title book-default-font">{book.title}</div>
       <div className="author">Harry Porter</div>
@@ -12,8 +15,19 @@ const Book = ({ book, handleRemoveBook }) => (
         <button type="button" className="default-comment">Edit</button>
       </div>
     </div>
-    <div className="book-update">
-      <img src="https://i.imgur.com/yUFOMIa.png" alt="percentage" />
+    <div className="book-update col-7">
+      <div className="progress-div d-flex">
+        <CircularProgressbar
+          value={42}
+          text=""
+        />
+        <div className="ml-3">
+          <p className="Percent-Complete mb-0">
+            64%
+          </p>
+          <p className="Complete">Completed</p>
+        </div>
+      </div>
       <div className="line-2" />
       <div>
         <p className="current-chapter default-current">CURRENT CHAPTER</p>

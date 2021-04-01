@@ -6,8 +6,11 @@
   --white: #fff;
   --medium-blue: #307bbe;
   --dodger-blue: #379cf6;
-  --warm-grey: #888888;
+  --warm-grey: #888;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
 
 /*
     CSS Reset
@@ -36,7 +39,7 @@ p {
 }
 
 body {
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
 }
 
 nav {
@@ -61,7 +64,7 @@ nav {
   width: 240px;
   height: 37px;
   margin: 6px 47px 2px 0;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   font-weight: bold;
   font-stretch: normal;
@@ -94,8 +97,6 @@ nav {
 }
 
 .Oval {
-  width: 25px;
-  height: 2 5px;
   margin-left: auto;
   padding: 14px;
   border: solid 1px #e8e8e8;
@@ -137,16 +138,14 @@ nav {
   height: 18px;
   margin: 0 39px 0 0;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   letter-spacing: normal;
 }
 
 .title {
-  width: 197px;
-  height: 29px;
   margin: 3px 323px 0 0;
-  font-family: RobotoSlab;
+  font-family: 'Roboto Slab', serif;
   font-size: 22px;
   letter-spacing: -0.2px;
 }
@@ -155,7 +154,7 @@ nav {
   width: 107px;
   height: 19px;
   margin: 4px 0 0;
-  font-family: RobotoSlab;
+  font-family: 'Roboto Slab', serif;
   font-size: 14px;
   font-weight: 300;
   letter-spacing: normal;
@@ -164,7 +163,7 @@ nav {
 
 .default-comment {
   height: 19px;
-  font-family: RobotoSlab;
+  font-family: 'Roboto Slab', serif;
   font-size: 14px;
   font-weight: 300;
   font-stretch: normal;
@@ -186,26 +185,43 @@ nav {
   padding: 9.9px 10px 12px 12px;
 }
 
-.Oval-2 {
-  width: 68px;
-  height: 68px;
-  border-style: solid;
-  border-width: 5px;
-  border-radius: 50%;
-  background-image: linear-gradient(to bottom, var(--medium-blue), var(--dodger-blue));
-  border-image-slice: 1;
+.progress-div {
+  width: 150px;
+}
+
+.Percent-Complete {
+  height: 39px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.Completed {
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
 }
 
 .book-update {
   display: flex;
   align-items: center;
-
 }
 
 .update-progress {
   width: 163px;
   height: 35px;
-  font-family: RobotoSlab;
+  font-family: 'Roboto Slab', serif;
   font-size: 13px;
   font-weight: 300;
   font-stretch: normal;
@@ -215,6 +231,7 @@ nav {
   text-align: center;
   color: var(--white);
   background-color: var(--azure);
+
   /*  padding: 10px; */
 }
 
@@ -231,16 +248,14 @@ nav {
   font-style: normal;
   line-height: normal;
   color: var(--black-two);
-  font-family: RobotoSlab;
+  font-family: 'Roboto Slab', serif;
 }
 
 .current-chapter {
-  width: 126px;
-  height: 18px;
   margin: 1px 58px 0 0;
   opacity: 0.5;
   font-size: 13px;
-  letter-spacing: normal; 
+  letter-spacing: normal;
 }
 
 .current-lesson {
@@ -248,14 +263,14 @@ nav {
   height: 21px;
   margin: 7px 109px 4px 0;
   font-size: 16px;
-  letter-spacing: -0.4px;  
+  letter-spacing: -0.4px;
 }
 
 .add-new-book {
   width: 174px;
   height: 24px;
   margin: 29px 524px 19px 0;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   font-weight: bold;
   font-stretch: normal;
@@ -285,5 +300,11 @@ nav {
   background-color: var(--white);
 }
 
-
-
+.Rectangle-2 {
+  width: 184px;
+  height: 45px;
+  margin: 19px 0 0 34px;
+  padding: 12.8px 19px 14.2px 22px;
+  border-radius: 3px;
+  background-color: var(--azure);
+}

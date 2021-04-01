@@ -34,15 +34,22 @@ const BooksForm = (props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="container" onSubmit={handleSubmit}>
       <h2 className="add-new-book">ADD NEW BOOK</h2>
-      <input type="text" id="title" name="title" className="book-title" value={book.title} onChange={handleChange} />
-      <select name="category" id="category" className="book-category" onChange={handleChange}>
+      <div className="form-inline">
+        <input type="text" id="title" name="title" className="book-title form-control w-50" value={book.title} onChange={handleChange} />
+        <select name="category" id="category" className="book-category form-control" onChange={handleChange}>
 
-        {categories.map((val) => <option key={val} value={val}>{val}</option>)}
+          {categories.map((val) => <option key={val} value={val}>{val}</option>)}
 
-      </select>
-      <button type="submit">submit</button>
+        </select>
+        <button
+          className="Rectangle-2 add-new-book text-white text-uppercase text-center d-flex align-items-center justify-content-center"
+          type="submit"
+        >
+          Add book
+        </button>
+      </div>
     </form>
   );
 };

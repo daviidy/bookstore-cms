@@ -8,14 +8,16 @@ const CategoryFilter = ({ handleFilterChange }) => {
   };
 
   return (
-    <select name="category" id="category" onChange={handleChange}>
-      {categories.map((val) => (
-        <option key={val} value={val}>
-          {val}
-        </option>
-      ))}
+    <div className="container mt-4">
+      <select className="form-control" name="category" id="category" onChange={handleChange}>
+        {categories.map((val) => (
+          <option key={val} value={val}>
+            {val}
+          </option>
+        ))}
 
-    </select>
+      </select>
+    </div>
   );
 };
 
