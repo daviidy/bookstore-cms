@@ -1,13 +1,310 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+:root {
+  --azure: #0290ff;
+  --black-two: #121212;
+  --cool-blue: #4386bf;
+  --white: #fff;
+  --medium-blue: #307bbe;
+  --dodger-blue: #379cf6;
+  --warm-grey: #888;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
+
+/*
+    CSS Reset
+*/
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+input,
+button,
+ul,
+li,
+a,
+p {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  text-align: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  background: transparent;
+  list-style: none;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-navbar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.panel-bg {
+  width: 1400px;
+  height: 95px;
+  margin: 0 0 38px;
+  padding: 23px 99px 27px 100px;
+  background-color: var(--white);
+}
+
+.Bookstore-CMS {
+  width: 240px;
+  height: 37px;
+  margin: 6px 47px 2px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--azure);
+}
+
+.dafault-font {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--black-two);
+  font-size: 13px;
+  height: 16px;
+}
+
+.BOOKS {
+  width: 59px;
+  margin: 18px 41px 11px 0;
+}
+
+.CATEGORIES {
+  width: 105px;
+  margin: 18px 664px 11px 41px;
+  opacity: 0.5;
+}
+
+.Oval {
+  margin-left: auto;
+  padding: 14px;
+  border: solid 1px #e8e8e8;
+  border-radius: 50%;
+}
+
+.Mask {
+  width: 17px;
+  height: 17px;
+  color: var(--azure);
+  font-size: 17px;
+  display: block;
+  margin: auto;
+}
+
+.book-panel {
+  width: 1200px;
+  height: 170px;
+  margin: 37px 100px 0;
+  padding: 32px 147px 26px 27px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book-default-font {
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  color: var(--black-two);
+}
+
+.category {
+  width: 49px;
+  height: 18px;
+  margin: 0 39px 0 0;
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  letter-spacing: normal;
+}
+
+.title {
+  margin: 3px 323px 0 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 22px;
+  letter-spacing: -0.2px;
+}
+
+.author {
+  width: 107px;
+  height: 19px;
+  margin: 4px 0 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: normal;
+  color: var(--cool-blue);
+}
+
+.default-comment {
+  height: 19px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--cool-blue);
+  margin: 5px;
+}
+
+.comment-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rectangle {
+  width: 90px;
+  height: 89.9px;
+  padding: 9.9px 10px 12px 12px;
+}
+
+.progress-div {
+  width: 150px;
+}
+
+.Percent-Complete {
+  height: 39px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.Completed {
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.book-update {
+  display: flex;
+  align-items: center;
+}
+
+.update-progress {
+  width: 163px;
+  height: 35px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--azure);
+
+  /*  padding: 10px; */
+}
+
+.line-2 {
+  width: 0.5px;
+  height: 70px;
+  margin: 18px 59px 0 79px;
+  border: solid 1px #e8e8e8;
+}
+
+.default-current {
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  color: var(--black-two);
+  font-family: 'Roboto Slab', serif;
+}
+
+.current-chapter {
+  margin: 1px 58px 0 0;
+  opacity: 0.5;
+  font-size: 13px;
+  letter-spacing: normal;
+}
+
+.current-lesson {
+  width: 105px;
+  height: 21px;
+  margin: 7px 109px 4px 0;
+  font-size: 16px;
+  letter-spacing: -0.4px;
+}
+
+.add-new-book {
+  width: 174px;
+  height: 24px;
+  margin: 29px 524px 19px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: var(--warm-grey);
+}
+
+.book-title {
+  width: 364px;
+  height: 45px;
+  margin: 19px 34px 0 0;
+  padding: 13px 571px 13px 17px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: var(--white);
+}
+
+.book-category {
+  width: 285px;
+  height: 45px;
+  margin: 19px 34px 0;
+  padding: 6px 15px 9px 16px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: var(--white);
+}
+
+.Rectangle-2 {
+  width: 184px;
+  height: 45px;
+  margin: 19px 0 0 34px;
+  padding: 12.8px 19px 14.2px 22px;
+  border-radius: 3px;
+  background-color: var(--azure);
 }
