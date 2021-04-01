@@ -3,7 +3,7 @@ In this project, we set up the bookstore application that will help a company or
 
  
  ## Live Demo:
-[BookStore](https://enabuyao.herokuapp.com/)
+[BookStore](https://bookstore-cms-dave-eric.herokuapp.com/)
 
 
 ## Built-With
